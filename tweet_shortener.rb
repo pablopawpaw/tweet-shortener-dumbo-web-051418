@@ -16,7 +16,6 @@ end
 def word_substituter(tweet)
   if tweet.class ==  String 
     tweet = tweet.split(" ")
-  end 
     tweet.map do |word|
       if dictionary.keys.include?(word)
         word = dictionary[word]
@@ -24,10 +23,11 @@ def word_substituter(tweet)
         word
       end 
     end.join(" ") 
+  end 
 end 
 
 def bulk_tweet_shortener(tweet)
-    puts word_substituter(tweet)
+  puts word_substituter(tweet)
 end 
 
 def selective_tweet_shortener
