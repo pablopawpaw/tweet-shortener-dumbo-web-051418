@@ -14,7 +14,7 @@ def dictionary
 end 
 
 def word_substituter(tweet)
-  if tweet.is? String 
+  if tweet.class ==  String 
     tweet = tweet.split(" ")
   end 
     tweet.map do |word|
