@@ -15,8 +15,9 @@ end
 
 def word_substituter(tweet)
   if tweet.is? String 
-    tweet_array = tweet.split(" ")
-    tweet_array.map do |word|
+    tweet = tweet.split(" ")
+  end 
+    tweet.map do |word|
       if dictionary.keys.include?(word)
         word = dictionary[word]
       else 
